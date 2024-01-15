@@ -30,6 +30,11 @@ input, button{
     margin:10px;
     border-radius: 20px;
     border: 0px;
+    text-align: center;
+}
+
+.botao{
+    margin-top: 35px;
 }
 
 button{
