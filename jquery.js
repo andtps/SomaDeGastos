@@ -1,4 +1,10 @@
 $(document).ready(function(){
+    $('#adicionarInput').click(function() {
+        const novoInput = $('<input type="text">');
+
+        $('#inputs').append(novoInput);
+      });
+
     $('form').submit(function(event){
         event.preventDefault()
         
@@ -9,7 +15,6 @@ $(document).ready(function(){
         const InputEnergia = parseFloat($('#energia').val()) || 0;
         const InputMercado = parseFloat($('#mercado').val()) || 0;
 
-        
         function soma() {
             let SomaInput = InputAgua + InputAluguel + InputCar + InputEscola + InputEnergia + InputMercado;
             return SomaInput;
