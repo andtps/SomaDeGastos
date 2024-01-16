@@ -1,13 +1,13 @@
-$(document).ready(function(){
+$(document).ready(function() {
     $('#adicionarInput').click(function() {
-        const novoInput = $('<input id="NovoInput" type="number">');
+        const novoInput = $('<input type="number">');
 
         $('.inputs').append(novoInput);
-      });
+    });
 
-    $('form').submit(function(event){
-        event.preventDefault()
-        
+    $('form').submit(function(event) {
+        event.preventDefault();
+
         const InputAluguel = parseFloat($('#aluguel').val()) || 0;
         const InputEscola = parseFloat($('#escola').val()) || 0;
         const InputCar = parseFloat($('#car').val()) || 0;
@@ -21,11 +21,8 @@ $(document).ready(function(){
             return SomaInput;
         }
 
-        total = soma();
-        
+        const total = soma();
+
         console.log(total);
-
-    })
-
+    });
 });
-
